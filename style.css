@@ -1,0 +1,227 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
+}
+
+.espacolateral{
+    width: 80vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header img{
+   width: 200px;
+   
+   
+
+}
+
+/* ===== Logo Entre Tons ===== */
+.logo {
+    font-size: 100px;
+    line-height: 0.8;
+    margin-left: 100px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ===== Menu ===== */
+.menu {
+    margin-top: 30px;
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* ===== Imagem do banner ===== */
+.destaque img {
+    width: 900px;
+    max-width: 200vw;
+    display: block;
+    margin: 40px auto;
+    border-radius: 4px;
+}
+
+
+/* ======= O que somos? ======= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    padding: 40px;
+}
+
+.sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 150px;
+}
+
+.texto {
+    width: 40%;
+}
+
+.texto h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.imagens {
+    display: flex;
+    gap: 20px;
+}
+
+.imagem-grande img {
+    width: 240px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.coluna-menor {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.coluna-menor img {
+    width: 220px;
+    height: 165px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+/* ====== Nossa Loja ======= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #ffffff;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.loja {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.loja h1 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    justify-items: center;
+}
+
+.galeria img {
+    width: 260px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+/* ====== Cursos ======= */
+
+.cursos-section{
+    margin-top: 150px;
+
+}
+
+.imagens img{
+    width: 260px;
+       float: right;
+    margin-left: 200px;
+}
+
+
+.social-section {
+    background-color: #8A2626; /* mesma cor do fundo do banner */
+    padding: 40px;
+    position: relative;
+}
+
+.social-section h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 40px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 80px; 
+    margin-bottom: 40px;
+}
+
+.icon {
+    width: 120px; 
+}
+
+
+.logo-direita {
+    width: 200px;
+    position: absolute;
+    right: 40px; 
+    top: 20px;   
+}
+
+
+
+
+
+
+
+
