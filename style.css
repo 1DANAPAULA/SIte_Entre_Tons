@@ -12,20 +12,20 @@ body {
     flex-direction: column;
     align-items: center;
 
-    
+
 }
 
-.espacolateral{
+.espacolateral {
     width: 80vw;
     max-width: 1400px;
     margin: 0 auto;
     text-align: center;
 }
 
-header img{
-   width: 200px;
-   
-   
+header img {
+    width: 200px;
+
+
 
 }
 
@@ -55,6 +55,76 @@ header img{
     letter-spacing: 1px;
 }
 
+/* -------- Menu Hamburguer ------- */
+#icone-barras,
+#icone-x,
+#menu_botao {
+     display: none; 
+}
+
+/* ----------- RESPONSIVIDADE ------------ */
+@media screen and (max-width:768px) {
+    #sombra {
+        background-color: var(--azul);
+        backdrop-filter: blur(10px);
+        z-index: 1;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        right: -101vw;
+        transition: .5s;
+    }
+
+
+    #menu_botao {
+        display: block;
+        z-index: 1;
+    }
+
+
+    header {
+        position: relative;
+    }
+
+    header button {
+        width: 50px;
+
+        background: none;
+        border: none;
+
+        display: unset;
+        cursor: pointer;
+    }
+
+    header svg {
+        fill: var(--branco);
+    }
+
+    #icone-barras {
+        display: block;
+    }
+
+    nav.menu {
+        width: 200px;
+        padding: 0px 30px;
+
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 15px;
+
+        position: fixed;
+        top: 165px;
+        right: -210px;
+        z-index: 1;
+        transition: .5s;
+    }
+
+    .menu a {
+        color: var(--branco);
+    }
+
+}
+
 
 /* ===== Imagem do banner ===== */
 .destaque img {
@@ -65,163 +135,341 @@ header img{
     border-radius: 4px;
 }
 
-
-/* ======= O que somos? ======= */
-
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
 }
 
-body {
-    background: #ffffff;
-    padding: 40px;
+h1,
+h2 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    /* semelhante ao estilo do layout */
 }
 
 .sobre {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    padding: 40px;
     gap: 40px;
-    margin-top: 150px;
 }
 
-.texto {
-    width: 40%;
+.sobre .texto {
+    flex: 1;
+    max-width: 450px;
 }
 
-.texto h1 {
-    font-size: 32px;
-    font-weight: 900;
-    margin-bottom: 20px;
+.sobre .texto h1 {
+    font-size: 30px;
 }
 
-.texto p {
-    font-size: 16px;
+.sobre .texto p {
     line-height: 1.6;
 }
 
-.imagens {
+.imagens-topo {
     display: flex;
     gap: 20px;
 }
 
-.imagem-grande img {
-    width: 240px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
-}
-
-.coluna-menor {
+.coluna {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.coluna-menor img {
-    width: 220px;
-    height: 165px;
+.foto {
+    width: 230px;
+    height: 170px;
     object-fit: cover;
     border-radius: 20px;
 }
 
-
-/* ====== Nossa Loja ======= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+.foto.grande {
+    width: 240px;
+    height: 320px;
 }
 
-body {
-    background: #ffffff;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-
-}
-
-.loja {
+.titulo-loja {
     text-align: center;
-    margin-top: 150px;
-}
-
-.loja h1 {
-    font-size: 32px;
-    font-weight: 900;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 26px;
 }
 
 .galeria {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
 }
 
 .galeria img {
-    width: 260px;
-    height: 240px;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
     object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform .3s ease;
+}
+
+.galeria img:hover {
+    transform: scale(1.03);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    gap: 40px;
+}
+
+.banner-texto {
+    max-width: 50%;
+    
+}
+
+
+
+.banner-imagem img {
+
+    gap: 50px;
+    height: 400px;
+    border-radius: 8px;
+    object-fit: cover;
+
+
+}
+
+/* escola */
+
+.h1-img {
+    justify-content: center;
+}
+
+
+.img {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.image-item {
+    width: 45%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+
+.titulo-escola{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.img{
+     gap: 20px;
+    border-radius: 8px;
+   margin-right: 15px;
+    height: 400px;
+   display: flex;
+   display: inline-block;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: #f0f0f0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff; 
+    padding: 40px;
+    width: 100%;
+    max-width: 500px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-radius: 25px;
 }
 
-/* ====== Cursos ======= */
 
-.cursos-section{
-    margin-top: 150px;
-
-}
-
-.imagens img{
-    width: 260px;
-       float: right;
-    margin-left: 200px;
-}
-
-
-.social-section {
-    background-color: #8A2626; /* mesma cor do fundo do banner */
-    padding: 40px;
-    position: relative;
-}
-
-.social-section h2 {
+.title {
+    font-size: 32px;
     text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    color: black;
-    margin-bottom: 40px;
+    color: #000000;
+   
+    font-weight: 600; 
+    margin-bottom: 30px;
 }
 
-.social-container {
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+
+label {
+    display: block; 
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 8px;
+    font-weight: 600; 
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px 20px; 
+    margin: 0;
+    border: none; 
+    background-color: #e0e0e0; 
+    border-radius: 30px; 
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333333; 
+    outline: none; 
+}
+
+
+textarea {
+    resize: none; 
+    height: 120px; 
+    border-radius: 30px; 
+}
+
+
+input:focus,
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1); 
+}
+
+
+.submit-btn {
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #000000; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 30px; 
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-top: 10px;
+}
+
+
+.submit-btn:hover {
+    background-color: #333333;
+}
+
+
+
+.social-footer {
+    background-color: #A31621; 
+    color: #000000; 
+    padding: 30px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1200px; 
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
-    gap: 80px; 
-    margin-bottom: 40px;
+    justify-content: space-between; 
+    align-items: center;
+    flex-wrap: wrap; 
 }
 
-.icon {
-    width: 120px; 
+.footer-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+
+/* Container dos Ícones */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin: 20px 0; 
+    font-size: 30px;
+}
+
+/* Ícones */
+.social-link {
+    color: #000000; 
+  
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons svg {
+    height: 65px;
+    max-height: 3500px;
+    max-width: 100%;
 }
 
 
-.logo-direita {
-    width: 200px;
-    position: absolute;
-    right: 40px; 
-    top: 20px;   
+.social-link:hover {
+    color: #ffffff; 
 }
 
 
+.separator {
+    color: #000000;
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 1; }
 
 
+.logo-text {
+    display: block; 
+    font-size: 38px; 
+    margin: 0;
+}
 
 
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; 
+        text-align: center;
+    }
 
+    .footer-title {
+        margin-bottom: 20px;
+    }
+    
+    
 
+    .footer-logo {
+        text-align: center;
+    }
+}
+
+.social-footer svg{
+    width: 65px;
+    height: 65px;
+    max-width: 65%;
+}
